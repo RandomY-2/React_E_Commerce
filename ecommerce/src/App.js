@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -6,7 +6,7 @@ import { Navbar, Products, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
 
 const App = () => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
